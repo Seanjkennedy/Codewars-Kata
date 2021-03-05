@@ -5,7 +5,7 @@ Example: The binary representation of 1234 is 10011010010, so the function shoul
 
 
 def count_bits(n):
-    return str(bin(n)).count("1")
+    return bin(n).count("1")
 
 print(count_bits(0), 0)
 print(count_bits(4), 1)

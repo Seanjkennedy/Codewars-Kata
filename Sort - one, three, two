@@ -47,6 +47,7 @@ def sort_by_name(arr="zero"):
                 temp.append(f'{single_repeating[number[0]]} hundred {non_repeating[number[1:]]}')
                 temp.append(number)
                 word_list.append(temp)
+            
             else:
                 
                 temp.append(f'{single_repeating[number[0]]} hundred {tens_repeating[number[1]]} '

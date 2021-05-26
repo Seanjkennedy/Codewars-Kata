@@ -1,0 +1,43 @@
+#Chess Fun #1: Chess Board Cell Color
+
+"""
+Task
+Given two cells on the standard chess board, determine whether they have the same color or not.
+Example
+For cell1 = "A1" and cell2 = "C3", the output should be true.
+
+For cell1 = "A1" and cell2 = "H3", the output should be false.
+
+Input/Output
+[input] string cell1
+
+[input] string cell2
+
+[output] a boolean value
+
+true if both cells have the same color, false otherwise.
+"""
+
+def chess_board_cell_color(cell1, cell2):
+
+    letters = {
+        'A': 1,
+        'B': 2,
+        'C': 3,
+        'D': 4,
+        'E': 5,
+        'F': 6,
+        'G': 7,
+        'H': 8
+        }
+
+    if int(cell1[1]) % 2 == 0:
+        x = (int(cell1[1]) - letters[cell1[0]]) % 2
+    else:
+        x = (int(cell1[1]) + letters[cell1[0]]) % 2
+    if int(cell2[1]) % 2 == 0:
+        y = (int(cell2[1]) - letters[cell2[0]]) % 2
+    else:
+        y = (int(cell2[1]) + letters[cell2[0]]) % 2
+
+    return True if (x == 0 and y == 0) or (x == 1 and y == 1) else False
